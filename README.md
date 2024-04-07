@@ -12,6 +12,8 @@ const hostname = os.networkInterfaces().tailscale0[0].address
 server.listen(port, hostname, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 ```
+[^1].
+
 [^1]: I get the tailscale ip from the node object 'os' 
 
 ## The Dockerfile
@@ -24,11 +26,11 @@ server.listen(port, hostname, () => {
 
 ## Docker Build Instructions
 * First the image will be built using buildx
-`docker buildx build -t cindy . `
+`docker buildx build -t cindy . ` [^1][^2]
 [^1]: -t gives the tag cindy
 [^2]: . Will build the image using the current directory
 * Create the Container from the image
-` docker run -d --network host cindy `
+` docker run -d --network host cindy ` [^1][^2]
 [^1]: -d detaches the container allowing the container to run in the background and freeing the terminal.
 [^2]: --network host puts the container onto the host pc network.
 * Navigating to http://100.90.203.29:3000/ on any device connected with my Tailscale network will have access to this node server. 
