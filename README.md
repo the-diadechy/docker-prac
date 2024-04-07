@@ -1,7 +1,7 @@
 Implementing Node.js + Docker + Tailscale server 
 =====
 
-This is a simple node.js server working within a Docker container that is exposed to the LAN via Tailscale. \
+This is a simple node.js server working within a Docker container that is exposed to the LAN via Tailscale. 
 
 * Node.js is used for running server-side environment. In this case a webserver.
 * Docker is a service platform that allows for os virtualization "Containers" which isolate any coding environment passed to it. The Docker Engine is the specific technology that connects client to server. The server is handled by the daemon dockerd.
@@ -24,7 +24,7 @@ server.listen(port, hostname, () => {
 
 ## Docker Build Instructions
 * First the image will be built using buildx
-`docker buildx build -t cindy . `
+`docker buildx build -t cindy . `\
 *-t gives the tag cindy*
 *Will build the image using the current directory*
 * Create the Container from the image
