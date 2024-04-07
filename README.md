@@ -29,6 +29,6 @@ server.listen(port, hostname, () => {
 *Will build the image using the current directory*
 * Create the Container from the image
 ` docker run -d --network host cindy `
-*-d detaches the container allowing the container to run in the background and freeing the terminal.*
-*--network host puts the container onto the host pc network.*
+\*-d detaches the container allowing the container to run in the background and freeing the terminal.*
+\*--network host puts the container onto the host pc network.*
 * Navigating to http://100.90.203.29:3000/ on any device connected with my Tailscale network will have access to this node server. 
