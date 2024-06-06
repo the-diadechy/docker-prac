@@ -32,3 +32,12 @@ server.listen(port, hostname, () => {
 *-d detaches the container allowing the container to run in the background and freeing the terminal.*\
 *--network host puts the container onto the host pc network.*
 * Navigating to http://100.90.203.29:3000/ on any device connected with my Tailscale network will have access to this node server. 
+
+## Troublehsooting Docker
+* Linux may have a broken link for running docker-desktop. Run:
+`file /etc/xdg/systemd/user/docker-desktop.service `\
+* if this points to /dev/null - delete the file:
+` sudo rm /etc/xdg/systemd/user/docker-desktop.service `\
+* Renable the service: 
+` systemctl --user enable docker-desktop `\
+
