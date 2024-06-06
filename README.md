@@ -34,6 +34,7 @@ server.listen(port, hostname, () => {
 * Navigating to http://100.90.203.29:3000/ on any device connected with my Tailscale network will have access to this node server. 
 
 ## Troublehsooting Docker
+* For debian install: Follow https://docs.docker.com/desktop/install/debian/ \
 * Linux may have a broken link for running docker-desktop. Run:
 `file /etc/xdg/systemd/user/docker-desktop.service `\
 * if this points to /dev/null - delete the file:
